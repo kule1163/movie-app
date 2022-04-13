@@ -1,9 +1,4 @@
 import React, { useEffect } from 'react'
-
-import styled from 'styled-components'
-
-import {grey} from "@mui/material/colors"
-
 import GeneralMovies from '../../componants/GeneralMovies'
 import SliderHeader from '../../componants/slider/SliderHeader'
 import InfoLine from '../../componants/InfoLine'

@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import styled from 'styled-components'
+import React from 'react'
 import InfoLine from '../../componants/InfoLine'
 import GeneralMovies from '../../componants/GeneralMovies'
 import SliderHeader from '../../componants/slider/SliderHeader'

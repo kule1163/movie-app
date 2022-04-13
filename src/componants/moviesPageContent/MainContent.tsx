@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from "styled-components"
-import {grey} from "@mui/material/colors"
-import { Typography } from '@mui/material'
 import PopulerMovies from '../slider/moviesSliders/PopulerMovies'
 import TopRatedMovies from '../slider/moviesSliders/TopRatedMovies'
 import NowPlayinMovies from '../slider/moviesSliders/NowPlayinMovies'

@@ -1,8 +1,7 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { Photo } from '../../../utils/movieTypes'
 import styled from "styled-components"
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import LazyLoad from "../../lazyLoadImage/LazyLoad";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import DefaultImage from "../../../assets/defaultPhoto.png"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -58,12 +57,9 @@ const Image = styled.img`
 
 interface PhotosProps {
   photo: Photo[];
-
-  /* setHeaderList: React.Dispatch<React.SetStateAction<string[]>>;
-    headerList: string */
 }
 
-const Photos:React.FC<PhotosProps> = ({photo, /* headerList, setHeaderList */}) => {
+const Photos:React.FC<PhotosProps> = ({photo}) => {
   
 
 
@@ -75,7 +71,7 @@ const Photos:React.FC<PhotosProps> = ({photo, /* headerList, setHeaderList */}) 
         {photo.map(item => (
        
           
-       <ImageBox key={item.file_path} /* ref={addToRef} */ >
+       <ImageBox key={item.file_path} >
               
        <LazyLoadImage
        src={item.file_path ? `https://image.tmdb.org/t/p/original/${item.file_path}` : DefaultImage}

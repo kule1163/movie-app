@@ -1,6 +1,5 @@
-import React, { ChangeEvent } from 'react'
+import React from 'react'
 import styled from "styled-components"
-import { Video } from "../../../utils/movieTypes"
 import { grey } from "@mui/material/colors"
 import { Typography } from '@mui/material'
 

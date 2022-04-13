@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Menu from '../../componants/navbar/Menu'
-import styled from 'styled-components'
 import MainContent from '../../componants/seriesPageContent/MainContent'
 import Footer from '../../componants/Footer'
 import SeriesPanel from '../../componants/panel/SeriesPanel'
@@ -15,10 +13,8 @@ interface Data {
 const Series = () => {
 
   const { data, isLoading, error } = useGetPopulerSeriesQuery("1")
-
   const d: Data = data
   const [randomId, setRandomId] = useState<number>()
-
   const ids = d?.results.map(item => item.id)
 
   useEffect(() => {

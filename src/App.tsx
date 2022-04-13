@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './App.css';
 import Home from './pages/menuPages/Home';
-import { ThemeProvider } from 'styled-components';
 import { useAppDispatch, useAppSelector } from "./app/hooks"
 import { setChangeCount, setSearchValue, setToggleSearchBar } from "./features/movies/moviesSlice"
 import { Routes, Route, useNavigate, useLocation, useParams, Navigate, useMatch, useResolvedPath } from 'react-router-dom';
@@ -24,23 +23,6 @@ import Search from './pages/Search';
 import EmptySearch from './componants/EmptySearch';
 import GenreSerie from './pages/seriePages/GenreSerie';
 
-export interface Theme {
-  breakpoints: {
-    xs: number;
-    sm: number;
-    md: number;
-  },
-  color: string
-}
-
-const theme: Theme = {
-  breakpoints: {
-    xs: 600,
-    sm: 800,
-    md: 1000
-  },
-  color: "red"
-}
 
 const localCount = localStorage.getItem("count") && JSON.parse(localStorage.getItem("count") || "")
 
@@ -92,7 +74,6 @@ function App() {
 
   return (
 
-    <ThemeProvider theme={theme}>
       <div onClick={handleClick} style={{ overflow: "hidden", position: "relative", minHeight: "100vh", backgroundColor: "#121212" }}>
         <Menu />
         <Routes location={location}>
@@ -121,7 +102,6 @@ function App() {
           <Route path='/search/' element={<EmptySearch />} />
         </Routes>
       </div>
-    </ThemeProvider>
   );
 }
 

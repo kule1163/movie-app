@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
 import MoviePanel from '../../componants/panel/MoviePanel'
 import MainContent from '../../componants/moviesPageContent/MainContent'
 import Footer from '../../componants/Footer'
@@ -27,8 +26,6 @@ const Movies = () => {
   }
 }, [data])
   
-
-
   return (
 
   <>
